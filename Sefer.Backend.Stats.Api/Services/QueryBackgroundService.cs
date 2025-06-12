@@ -54,7 +54,7 @@ public class QueryBackgroundService(IServiceProvider serviceProvider) : Backgrou
 
     private void UpdateClientVisitsTable()
     {
-        string query = DatabaseRequestHandler.GetQuery("update_client_visits");
+        var query = DatabaseRequestHandler.GetQuery("update_client_visits");
         using var connection = _connectionProvider.GetConnection();
         connection.Execute(query, null, null, 3600);
     }

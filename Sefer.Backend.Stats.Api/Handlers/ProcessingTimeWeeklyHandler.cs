@@ -12,7 +12,7 @@ public class ProcessingTimeWeeklyHandler(IServiceProvider provider) : CachedRequ
             @"SELECT AVG(processing_time) as average, DATE_PART('year',log_time) AS year, DATE_PART('week',log_time) AS week, COUNT(*) AS count
               FROM api_request_log_entries
               GROUP BY DATE_PART('year',log_time), DATE_PART('week',log_time)
-             ORDER BY [Year], [Week]";
+             ORDER BY year, week";
         var result = await DbConnection.QueryAsync<ProcessingTimeWeekly>(query, null, null, 900, null);
         return result.ToList();
     }

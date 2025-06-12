@@ -12,6 +12,8 @@ public static class Performance
         async (IMediator mediator, ushort hours) =>
             await mediator.Send(new RecentProcessingTimesRequest(hours)));
 
-        app.MapGet("/api-requests/hour-of-the-week", EndpointUtils.GetAsync<ApiRequestPerHourRequest>);
+        app.MapGet("/api-requests/hour-of-the-day", EndpointUtils.GetAsync<ApiRequestPerHourRequest>);
+        
+        app.MapGet("/api-requests/day-of-the-week", EndpointUtils.GetAsync<ApiRequestPerDayRequest>);
     }
 }
