@@ -6,7 +6,7 @@
     <Authors>Martin Hillford</Authors>
     <Copyright>2016-2025, Martin Hillford</Copyright>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
-    <Version>1.7.4</Version>
+    <Version>1.7.5</Version>
     <RootNamespace>Sefer.Backend.Stats.Api</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
